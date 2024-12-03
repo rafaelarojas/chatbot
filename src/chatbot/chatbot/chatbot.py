@@ -11,13 +11,11 @@ intentions = {
     "biblioteca": "Ir para a biblioteca",
     "atelie": "Ir para o ateliê",
     "andre": "Ir até o André para encher o saco dele",
-    "refeitorio": "Ir para o refeitório",
+    "refeitorio": "Ir para o refeitório",   
     "recepcao": "Ir para a recepção",
     "arquibancada": "Ir para a arquibancada",
     "auditorio": "Ir para o auditório",
 }
-
-# Dicionário de ações (intenção -> função)
 
 # Dicionário de ações (intenção -> função)
 actions = {
@@ -34,16 +32,17 @@ actions = {
 
 # Expressões regulares para compreender variações de comandos
 command_patterns = {
-    "secretaria": re.compile(r"(vá para a secretaria|dirija-se a secretaria|secretaria|me leve para a secretaria|quero ir para a secretaria|secretaria, por favor|onde fica a secretaria|levar-me à secretaria|pode me levar à secretaria|ir até a secretaria|vou para a secretaria)"),
-    "laboratorio": re.compile(r"(vá para o laboratório|dirija-se ao laboratório|laboratório|me leve para o laboratório|onde fica o laboratório|laboratório, por favor|levar-me ao laboratório|pode me levar ao laboratório|ir até o laboratório|quero ir para o laboratório|vou para o laboratório)"),
-    "biblioteca": re.compile(r"(vá para a biblioteca|dirija-se a biblioteca|biblioteca|me leve para a biblioteca|onde fica a biblioteca|quero ir para a biblioteca|biblioteca, por favor|levar-me à biblioteca|pode me levar à biblioteca|ir até a biblioteca|vou para a biblioteca)"),
-    "atelie": re.compile(r"(vá para o ateliê|dirija-se ao ateliê|ateliê|me leve para o ateliê|onde fica o ateliê|quero ir para o ateliê|ateliê, por favor|levar-me ao ateliê|pode me levar ao ateliê|ir até o ateliê|vou para o ateliê)"),
-    "andre": re.compile(r"(vá até o andré encher o saco dele|encontre o andré|vá até o andré|ve ate o andre|ir ao andré|cadê o andré|me leve ao andré|onde está o andré|ache o andré|vá falar com o andré|falar com o andré|quero ver o andré)"),
-    "refeitorio": re.compile(r"(vá para o refeitório|dirija-se ao refeitório|refeitório|me leve para o refeitório|onde fica o refeitório|quero ir para o refeitório|refeitório, por favor|levar-me ao refeitório|pode me levar ao refeitório|ir até o refeitório|vou para o refeitório)"),
-    "recepcao": re.compile(r"(vá para a recepção|dirija-se a recepção|recepção|me leve para a recepção|onde fica a recepção|quero ir para a recepção|recepção, por favor|levar-me à recepção|pode me levar à recepção|ir até a recepção|vou para a recepção)"),
-    "arquibancada": re.compile(r"(vá para a arquibancada|dirija-se a arquibancada|arquibancada|me leve para a arquibancada|onde fica a arquibancada|quero ir para a arquibancada|arquibancada, por favor|levar-me à arquibancada|pode me levar à arquibancada|ir até a arquibancada|vou para a arquibancada)"),
-    "auditorio": re.compile(r"(vá para o auditório|dirija-se ao auditório|auditório|me leve para o auditório|onde fica o auditório|quero ir para o auditório|auditório, por favor|levar-me ao auditório|pode me levar ao auditório|ir até o auditório|vou para o auditório)"),
+    "secretaria": re.compile(r"(vá ?para ?a ?secretaria|dirija-se ?a ?secretaria|secretaria|me ?leve ?para ?a ?secretaria|quero ?ir ?para ?a ?secretaria|secretaria, ?por ?favor|onde ?fica ?a ?secretaria|levar-me ?à ?secretaria|pode ?me ?levar ?à ?secretaria|ir ?até ?a ?secretaria|va ?para ?a ?secretaria)", re.IGNORECASE),
+    "laboratorio": re.compile(r"(vá ?para ?o ?laboratório|dirija-se ?ao ?laboratório|laboratório|me ?leve ?para ?o ?laboratório|onde ?fica ?o ?laboratório|laboratório, ?por ?favor|levar-me ?ao ?laboratório|pode ?me ?levar ?ao ?laboratório|ir ?até ?o ?laboratório|quero ?ir ?para ?o ?laboratório|va ?para ?o ?laboratório)", re.IGNORECASE),
+    "biblioteca": re.compile(r"(vá ?para ?a ?biblioteca|dirija-se ?a ?biblioteca|biblioteca|me ?leve ?para ?a ?biblioteca|onde ?fica ?a ?biblioteca|quero ?ir ?para ?a ?biblioteca|biblioteca, ?por ?favor|levar-me ?à ?biblioteca|pode ?me ?levar ?à ?biblioteca|ir ?até ?a ?biblioteca|va ?para ?a ?biblioteca)", re.IGNORECASE),
+    "atelie": re.compile(r"(vá ?para ?o ?ateliê|dirija-se ?ao ?ateliê|ateliê|me ?leve ?para ?o ?ateliê|onde ?fica ?o ?ateliê|quero ?ir ?para ?o ?ateliê|ateliê, ?por ?favor|levar-me ?ao ?ateliê|pode ?me ?levar ?ao ?ateliê|ir ?até ?o ?ateliê|va ?para ?o ?ateliê)", re.IGNORECASE),
+    "andre": re.compile(r"(vá ?até ?o ?andré ?encher ?o ?saco ?dele|encontre ?o ?andré|vá ?até ?o ?andré|ve ?ate ?o ?andre|ir ?ao ?andré|cadê ?o ?andré|me ?leve ?ao ?andré|onde ?está ?o ?andré|ache ?o ?andré|vá ?falar ?com ?o ?andré|falar ?com ?o ?andré|quero ?ver ?o ?andré)", re.IGNORECASE),
+    "refeitorio": re.compile(r"(vá ?para ?o ?refeitório|dirija-se ?ao ?refeitório|refeitório|me ?leve ?para ?o ?refeitório|onde ?fica ?o ?refeitório|quero ?ir ?para ?o ?refeitório|refeitório, ?por ?favor|levar-me ?ao ?refeitório|pode ?me ?levar ?ao ?refeitório|ir ?até ?o ?refeitório|va ?para ?o ?refeitório)", re.IGNORECASE),
+    "recepcao": re.compile(r"(vá ?para ?a ?recepção|dirija-se ?a ?recepção|recepção|me ?leve ?para ?a ?recepção|onde ?fica ?a ?recepção|quero ?ir ?para ?a ?recepção|recepção, ?por ?favor|levar-me ?à ?recepção|pode ?me ?levar ?à ?recepção|ir ?até ?a ?recepção|va ?para ?a ?recepção)", re.IGNORECASE),
+    "arquibancada": re.compile(r"(vá ?para ?a ?arquibancada|dirija-se ?a ?arquibancada|arquibancada|me ?leve ?para ?a ?arquibancada|onde ?fica ?a ?arquibancada|quero ?ir ?para ?a ?arquibancada|arquibancada, ?por ?favor|levar-me ?à ?arquibancada|pode ?me ?levar ?à ?arquibancada|ir ?até ?a ?arquibancada|va ?para ?a ?arquibancada)", re.IGNORECASE),
+    "auditorio": re.compile(r"(vá ?para ?o ?auditório|dirija-se ?ao ?auditório|auditório|me ?leve ?para ?o ?auditório|onde ?fica ?o ?auditório|quero ?ir ?para ?o ?auditório|auditório, ?por ?favor|levar-me ?ao ?auditório|pode ?me ?levar ?ao ?auditório|ir ?até ?o ?auditório|va ?para ?o ?auditório)", re.IGNORECASE),
 }
+
 
 
 def normalize_text(text):
